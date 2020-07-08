@@ -1,0 +1,20 @@
+1. SELECT date_received as 'Date Received', date_sent as 'Date Sent', COUNt(Issue) AS 'Number of Issues'
+	FROM Consumer_Complaints 
+	WHERE date_received = date_sent
+	GROUP BY date_received;
+
+2. SELECT issue, date_received, state_name
+	FROM Consumer_Complaints 
+	WHERE state_name = 'NY';
+
+3. SELECT issue, date_received, state_name
+	FROM Consumer_Complaints 
+	WHERE state_name = 'NY' OR state_name = 'CA';
+
+4. SELECT complaint_id, product_name
+	FROM Consumer_Complaints
+	WHERE product_name LIKE '%credit%';
+
+5. SELECT complaint_id, Issue
+	FROM Consumer_Complaints
+	WHERE Issue LIKE '%late%';
